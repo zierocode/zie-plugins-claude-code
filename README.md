@@ -13,7 +13,7 @@
 ### Add the marketplace
 
 ```bash
-claude plugin marketplace add https://github.com/zierocode/zie-plugins-claude-code.git
+claude plugin marketplace add https://claude.zie-agent.cloud/marketplace.json
 ```
 
 ### Install a plugin
@@ -41,6 +41,10 @@ To register a new plugin, add an entry to the `plugins` array in `.claude-plugin
 {
   "name": "plugin-name",
   "description": "Short description of the plugin",
+  "author": {
+    "name": "zie",
+    "email": "iam@zie-agent.cloud"
+  },
   "category": "development",
   "source": {
     "source": "url",

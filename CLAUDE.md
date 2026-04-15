@@ -87,3 +87,37 @@ Hosted on VPS (`zie-vps`) via Caddy static file server at `/srv/claude-marketpla
 - **Source type is always `url`** pointing to the plugin's git repo
 - **Version bumps happen in each plugin's repo**, not here
 - **Changes to marketplace.json auto-deploy** — no manual VPS updates needed
+
+## How to deploy
+
+This repo uses zie-framework's safety rules which block direct `git push origin main`. To deploy changes:
+
+### Option 1: Branch + PR (recommended)
+
+```bash
+git checkout -b <branch-name>
+# make changes, commit
+git push -u origin <branch-name>
+gh pr create --title "Description"
+gh pr merge <number> --merge --delete-branch
+git checkout main && git pull
+```
+
+### Option 2: Manual deploy (if CI/CD fails or VPS needs manual update)
+
+```bash
+ssh zie@zie-vps "bash /srv/claude-marketplace/deploy.sh"
+```
+
+### CI/CD status
+
+Check latest runs:
+```bash
+gh run list --limit 5
+```
+
+### Verify live endpoint
+
+```bash
+curl -s https://claude.zie-agent.cloud/marketplace.json | python3 -m json.tool
+```

@@ -1,0 +1,24 @@
+name: Deploy Marketplace to VPS
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .claude-plugin/marketplace.json
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Connect to Tailscale
+        uses: tailscale/github-action@v3
+        with:
+          authkey-url: ${{ secrets.TS_AUTHKEY }}
+
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1
+        with:
+          host: zie-vps
+          username: zie
+          key: ${{ secrets.VPS_SSH_KEY }}
+          script: bash /srv/claude-marketplace/deploy.sh

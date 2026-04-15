@@ -3,12 +3,17 @@
   "name": "zie-plugins",
   "description": "zie-plugins for Claude Code",
   "owner": {
-    "name": "zie"
+    "name": "zie",
+    "email": "iam@zie-agent.cloud"
   },
   "plugins": [
     {
       "name": "zie-framework",
       "description": "Solo developer SDLC framework for Claude Code — spec-first, TDD, automated testing, brain-integrated",
+      "author": {
+        "name": "zie",
+        "email": "iam@zie-agent.cloud"
+      },
       "category": "development",
       "source": {
         "source": "url",

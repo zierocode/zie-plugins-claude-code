@@ -20,6 +20,20 @@
         "url": "https://github.com/zierocode/zie-framework.git"
       },
       "homepage": "https://github.com/zierocode/zie-framework"
+    },
+    {
+      "name": "zie-brain",
+      "description": "Personal AI memory — semantic cross-project memory for Claude Code",
+      "author": {
+        "name": "zie",
+        "email": "iam@zie-agent.cloud"
+      },
+      "category": "development",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/zierocode/zie-brain.git"
+      },
+      "homepage": "https://github.com/zierocode/zie-brain"
     }
   ]
 }

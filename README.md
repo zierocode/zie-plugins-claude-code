@@ -6,7 +6,8 @@
 
 | Plugin | Description | Repo |
 |--------|-------------|------|
-| [zie-framework](https://github.com/zierocode/zie-framework) | Solo developer SDLC framework — spec-first, TDD, automated testing | [source](https://github.com/zierocode/zie-framework) |
+| [zie-framework](https://github.com/zierocode/zie-framework) | Solo developer SDLC framework for Claude Code — spec-first, TDD, automated testing, brain-integrated | [source](https://github.com/zierocode/zie-framework) |
+| [zie-brain](https://github.com/zierocode/zie-brain) | Personal AI memory — semantic cross-project memory for Claude Code | [source](https://github.com/zierocode/zie-brain) |
 
 ## Install
 
